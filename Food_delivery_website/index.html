@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KhanaKhaoX | Food Delivery</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand nav-link" href="#home" data-view="home" aria-label="KhanaKhaoX home">
+        <span class="brand-mark">Kx</span>
+        <span>KhanaKhaoX</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a class="nav-link active" href="#home" data-view="home">Home</a>
+        <a class="nav-link" href="#restaurants" data-view="restaurants">Restaurants</a>
+        <a class="nav-link" href="#offers" data-view="offers">Offers</a>
+        <a class="nav-link" href="#orders" data-view="orders">Orders</a>
+        <a class="nav-link" href="#contact" data-view="contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">Dark</button>
+        <button class="cart-button" id="openCart" type="button" aria-label="Open cart">
+          <span>Cart</span>
+          <strong id="cartCount">0</strong>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-view active" id="homePage" data-page="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Fast local delivery</p>
+          <h1>Cravings handled before the next episode starts.</h1>
+          <p>Find nearby restaurants, compare cuisines, build a cart, and place an order with a smooth checkout flow.</p>
+          <form class="search-panel" id="searchForm">
+            <label for="searchInput">Search restaurant, dish, or cuisine</label>
+            <div class="search-row">
+              <input id="searchInput" type="search" placeholder="Try biryani, pizza, sushi..." autocomplete="off">
+              <button type="submit">Find food</button>
+            </div>
+          </form>
+          <div class="hero-stats" aria-label="Delivery stats">
+            <span><strong>25 min</strong> avg delivery</span>
+            <span><strong>120+</strong> partner kitchens</span>
+            <span><strong>4.7</strong> user rating</span>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="">
+          <div class="floating-order">
+            <strong>Live order</strong>
+            <span>Paneer bowl arriving in 12 min</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-band" aria-label="How it works">
+        <article>
+          <span>01</span>
+          <h2>Pick a restaurant</h2>
+          <p>Use cuisine, rating, delivery time, and open-now filters.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Add dishes</h2>
+          <p>Build your cart with quantity controls and live totals.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Checkout fast</h2>
+          <p>Enter delivery details and place the order instantly.</p>
+        </article>
+      </section>
+    </section>
+
+    <section class="page-view" id="restaurantsPage" data-page="restaurants">
+      <section class="page-head">
+        <p class="eyebrow">Restaurant Listing</p>
+        <h1>Explore kitchens near you</h1>
+        <p id="apiStatus">Connecting to restaurant API...</p>
+      </section>
+
+      <section class="content-shell" aria-label="Restaurants">
+        <aside class="filters">
+          <div class="section-title">
+            <p>Filters</p>
+            <button id="clearFilters" type="button">Clear</button>
+          </div>
+
+          <label for="cuisineFilter">Cuisine</label>
+          <select id="cuisineFilter">
+            <option value="all">All cuisines</option>
+          </select>
+
+          <label for="ratingFilter">Minimum rating</label>
+          <input id="ratingFilter" type="range" min="0" max="5" step="0.5" value="0">
+          <output id="ratingOutput" for="ratingFilter">Any rating</output>
+
+          <label for="deliveryFilter">Delivery time</label>
+          <select id="deliveryFilter">
+            <option value="all">Any time</option>
+            <option value="25">Under 25 min</option>
+            <option value="35">Under 35 min</option>
+            <option value="45">Under 45 min</option>
+          </select>
+
+          <label class="checkbox-line">
+            <input id="openNowFilter" type="checkbox">
+            <span>Open now</span>
+          </label>
+        </aside>
+
+        <section class="restaurant-area">
+          <div class="restaurant-toolbar">
+            <div>
+              <p class="eyebrow">Available now</p>
+              <h2 id="resultHeading">Popular near you</h2>
+            </div>
+            <button class="outline-button" id="surpriseMe" type="button">Surprise me</button>
+          </div>
+          <div class="restaurant-grid" id="restaurantGrid"></div>
+        </section>
+      </section>
+    </section>
+
+    <section class="page-view" id="offersPage" data-page="offers">
+      <section class="page-head">
+        <p class="eyebrow">Deals</p>
+        <h1>Offers for hungry people</h1>
+        <p>Apply these codes at checkout in the real version. For this project, they make the page feel alive and complete.</p>
+      </section>
+      <section class="offer-grid">
+        <article class="offer-card">
+          <span>FLAT 30%</span>
+          <h2>Weekend Feast</h2>
+          <p>Great for pizzas, biryani buckets, and family combos.</p>
+          <button type="button" data-copy-code="FEAST30">Copy FEAST30</button>
+        </article>
+        <article class="offer-card">
+          <span>FREE DELIVERY</span>
+          <h2>First Sprint</h2>
+          <p>No delivery fee on your first KhanaKhaoX order.</p>
+          <button type="button" data-copy-code="FIRSTX">Copy FIRSTX</button>
+        </article>
+        <article class="offer-card">
+          <span>BUY 1 GET 1</span>
+          <h2>Snack Stack</h2>
+          <p>Perfect for burgers, wraps, momos, and fries.</p>
+          <button type="button" data-copy-code="STACK2">Copy STACK2</button>
+        </article>
+      </section>
+    </section>
+
+    <section class="page-view" id="ordersPage" data-page="orders">
+      <section class="page-head">
+        <p class="eyebrow">Order Tracking</p>
+        <h1>Track your latest delivery</h1>
+        <p>A clean order-status page with progress steps and estimated arrival.</p>
+      </section>
+      <section class="tracking-panel">
+        <div class="tracking-map">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1100&q=80" alt="City map preview">
+        </div>
+        <div class="tracking-info">
+          <p class="eyebrow">Order #KX2048</p>
+          <h2>Arriving in 18 minutes</h2>
+          <ol class="timeline">
+            <li class="done">Order confirmed</li>
+            <li class="done">Restaurant is preparing</li>
+            <li class="current">Rider picked up</li>
+            <li>Delivered</li>
+          </ol>
+          <button class="checkout-btn" id="openCartFromOrders" type="button">View current cart</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="page-view" id="contactPage" data-page="contact">
+      <section class="page-head">
+        <p class="eyebrow">Support</p>
+        <h1>Need help with food, delivery, or refunds?</h1>
+        <p>Send a message and the support card will confirm it with JavaScript.</p>
+      </section>
+      <section class="contact-layout">
+        <form class="contact-form" id="contactForm">
+          <label for="contactName">Name</label>
+          <input id="contactName" type="text" placeholder="Your name" required>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" placeholder="you@example.com" required>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" rows="5" placeholder="How can we help?" required></textarea>
+          <button class="checkout-btn" type="submit">Send message</button>
+        </form>
+        <div class="support-card">
+          <h2>KhanaKhaoX Care</h2>
+          <p>Available daily from 8 AM to 1 AM for order and payment support.</p>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="mailto:support@khanakhaox.com">support@khanakhaox.com</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand nav-link" href="#home" data-view="home">
+        <span class="brand-mark">Kx</span>
+        <span>KhanaKhaoX</span>
+      </a>
+      <p>Built with HTML, CSS, JavaScript, DOM events, cart logic, filters, checkout, and API fetch handling.</p>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <a class="nav-link" href="#restaurants" data-view="restaurants">Restaurants</a>
+      <a class="nav-link" href="#offers" data-view="offers">Offers</a>
+      <a class="nav-link" href="#contact" data-view="contact">Contact</a>
+    </div>
+    <div>
+      <h2>Popular</h2>
+      <span>Biryani</span>
+      <span>Pizza</span>
+      <span>Burgers</span>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">Cart System</p>
+          <h2>Your order</h2>
+        </div>
+        <button class="icon-button close-button" id="closeCart" type="button" aria-label="Close cart">x</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-summary">
+        <p><span>Subtotal</span><strong id="subtotal">Rs 0</strong></p>
+        <p><span>Delivery</span><strong id="deliveryFee">Rs 0</strong></p>
+        <p><span>Tax</span><strong id="taxAmount">Rs 0</strong></p>
+        <p class="total"><span>Total</span><strong id="grandTotal">Rs 0</strong></p>
+        <button class="checkout-btn" id="checkoutBtn" type="button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form method="dialog" id="checkoutForm">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h2>Delivery details</h2>
+        </div>
+        <button class="icon-button close-button" value="cancel" type="submit" aria-label="Close checkout">x</button>
+      </div>
+
+      <label for="customerName">Name</label>
+      <input id="customerName" name="customerName" type="text" placeholder="Your name" required>
+
+      <label for="customerPhone">Phone</label>
+      <input id="customerPhone" name="customerPhone" type="tel" placeholder="98765 43210" required>
+
+      <label for="customerAddress">Address</label>
+      <textarea id="customerAddress" name="customerAddress" rows="3" placeholder="Flat, street, landmark" required></textarea>
+
+      <button class="checkout-btn" value="default" type="submit">Place order</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
