@@ -1,0 +1,418 @@
+/* Core Styling Rules Layout Matrix Baseline Setup resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #f1f3f6;
+    color: #212121;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 1. Main Flipkart Brand Blue Top Ribbon Header Layout */
+.fk-navbar {
+    background-color: #2874f0;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1248px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand-group {
+    display: flex;
+    flex-direction: column;
+    width: 112px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 75px;
+    height: auto;
+}
+
+.plus-tag {
+    font-size: 11px;
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 2px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.plus-yellow {
+    color: #ffe500;
+    font-weight: 700;
+}
+
+.plus-yellow img {
+    width: 10px;
+    height: 10px;
+}
+
+/* Search Box Container */
+.search-wrapper {
+    background-color: #ffffff;
+    flex-grow: 1;
+    max-width: 600px;
+    height: 36px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+.search-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #212121;
+}
+
+.search-wrapper input::placeholder {
+    color: #9c9c9c;
+}
+
+.search-icon {
+    color: #2874f0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Nav Action Items Links Elements Row text formatting layout */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-left: auto;
+}
+
+.login-btn {
+    background-color: #ffffff;
+    color: #2874f0;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    padding: 4px 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.login-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cart-icon {
+    font-size: 15px;
+}
+
+.arrow-icon {
+    font-size: 11px;
+}
+
+/* 2. Top Fast Categorical Navigation Horizontal Banner Element Strip */
+.category-ribbon {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.category-container {
+    width: 100%;
+    max-width: 1248px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    overflow-x: auto;
+}
+
+.category-container::-webkit-scrollbar {
+    display: none; /* Hide standard bars on screen sizes mapping layouts */
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px;
+    min-width: 70px;
+}
+
+.category-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.category-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.category-item span i {
+    font-size: 10px;
+    color: #878787;
+}
+
+.category-item:hover span {
+    color: #2874f0;
+}
+
+/* Page Central Grid Block Alignment Constraints Layer */
+.page-body-grid {
+    max-width: 1248px;
+    margin: 8px auto;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 3. Hero Frame Sliders Display Windows Dynamic Properties wrapper setup */
+.carousel-viewport {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%; /* Sized relatively matching explicit quantity count items index rows metrics */
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    width: 33.3333%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    width: 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #333333;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 0 4px 4px 0;
+}
+
+.carousel-arrow.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.carousel-arrow:hover {
+    background-color: #ffffff;
+}
+
+/* 4. Products Grid + Advertisement Promo Box Multi-Column Shelf Container Row */
+.shelf-layout-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.products-shelf-card {
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.title-sub-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title-sub-group h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.timer-badge {
+    background-color: #f1f3f6;
+    font-size: 13px;
+    color: #666666;
+    padding: 6px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.timer-badge i {
+    color: #2874f0;
+}
+
+.view-all-btn {
+    background-color: #2874f0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.view-all-btn:hover {
+    background-color: #1a62d6;
+}
+
+/* Horizontal Display Grid Elements Items Row */
+.products-grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.product-item-card {
+    border: 1px solid #f0f0f0;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+}
+
+.product-item-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.img-frame {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.img-frame img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.prod-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.prod-deal-pricing {
+    font-size: 14px;
+    color: #388e3c;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.prod-brand-tag {
+    font-size: 12px;
+    color: #878787;
+}
+
+/* Right Static Sidebar Ad Block styling configuration */
+.sidebar-ad-card {
+    width: 230px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+}
+
+.sidebar-ad-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Viewport Adjustments for Tablet and Smartphone screen rules mapping variants */
+@media (max-width: 1024px) {
+    .sidebar-ad-card {
+        display: none; /* Drop side promotion card to expand product lists horizontally */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-actions .nav-link, .nav-actions .dropdown-wrapper {
+        display: none; /* Simplify top layout header actions bar components to keep neat ergonomics */
+    }
+    .products-grid-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .carousel-viewport {
+        height: 160px;
+    }
+}

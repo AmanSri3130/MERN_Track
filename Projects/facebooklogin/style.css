@@ -1,0 +1,492 @@
+/* Structural Global Typography System & Element Alignment Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Dual Column Screen Splitting Grid matching image_512319.jpg */
+.main-split-container {
+    display: flex;
+    flex: 1;
+    width: 100vw;
+}
+
+/* Left Hero Banner Column Content Area Section */
+.left-hero-panel {
+    flex: 1.15;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 60px;
+}
+
+.left-content-wrapper {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.logo-wrapper {
+    margin-bottom: 28px;
+    z-index: 10;
+}
+
+.fb-brand-svg {
+    width: 52px;
+    height: 52px;
+}
+
+/* Exact Complex Mock Interface Composition Graphic Element Styles */
+.graphics-composition-matrix {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    margin-bottom: 36px;
+    margin-top: 10px;
+}
+
+/* Global Mock UI Floating Sub-Cards Styling */
+.nested-ui-card {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.nested-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Positioning Coordinates matching layout orientation */
+.bg-plant-card {
+    width: 175px;
+    height: 200px;
+    left: 45px;
+    top: 50px;
+    z-index: 1;
+}
+
+.main-profile-frame {
+    width: 255px;
+    height: 340px;
+    left: 175px;
+    top: 0px;
+    z-index: 2;
+    border: 5px solid #ffffff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-left-card {
+    width: 165px;
+    height: 210px;
+    left: 90px;
+    top: 175px;
+    z-index: 3;
+    border: 4px solid #ffffff;
+}
+
+/* Structural Header Pill Icons overlays inside mock cards */
+.card-header-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header-icon.blue-star {
+    background-color: #1877f2;
+}
+
+/* Utility Pseudo Icon shapes instead of external files weight */
+.home-icon::before { content: "🏠"; font-size: 11px; color: white;}
+.star-icon::before { content: "⭐"; font-size: 11px; color: white;}
+
+.time-stamp-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #5340ff;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.interactive-status-bar {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-pill-track {
+    height: 16px;
+    width: 90px;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.circle-indicators-row {
+    display: flex;
+    gap: 4px;
+}
+
+.indicator-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: inline-block;
+}
+
+.bottom-placeholder-lines {
+    padding: 10px 12px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line-skeleton {
+    height: 8px;
+    background-color: #eaebef;
+    border-radius: 4px;
+}
+.line-skeleton.short { width: 50%; }
+.line-skeleton.long { width: 85%; }
+
+/* Floating Icon overlays styling rules */
+.emoji-bubble {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 10px;
+    top: 40px;
+    z-index: 4;
+}
+
+.emoji-bubble img {
+    width: 100%;
+    height: 100%;
+}
+
+.heart-bubble-burst {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ff1744;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 70px;
+    bottom: 130px;
+    z-index: 4;
+    box-shadow: 0 6px 16px rgba(255, 23, 68, 0.35);
+}
+
+.heart-vector {
+    width: 22px;
+    height: 22px;
+}
+
+.circle-profile-badge-overlay {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 4px;
+    bottom: -15px;
+    left: 220px;
+    z-index: 5;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.circle-inner-wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #1877f2;
+}
+
+.circle-inner-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typography Headings formatting rules */
+.hero-primary-headline {
+    font-size: 56px;
+    font-weight: 800;
+    color: #1c1e21;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.blue-text-accent {
+    color: #1c74f4;
+}
+
+/* Right System Input Form Panel View Column Section */
+.right-auth-panel {
+    flex: 1;
+    background-color: #ffffff;
+    border-left: 1px solid #eaebef;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 75px;
+}
+
+.login-form-card-container {
+    width: 100%;
+    max-width: 395px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-title-header {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1c1e21;
+    margin-bottom: 20px;
+}
+
+/* Floating Label Animated Form Fields Group Styles */
+.input-field-group-wrapper {
+    position: relative;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.input-field-group-wrapper input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    padding: 18px 16px 6px 16px;
+    font-size: 15px;
+    color: #1c1e21;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Initial Focus state matching the blue outline shown in image_512319.jpg */
+.input-field-group-wrapper.focused-blue-ring input,
+.input-field-group-wrapper input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.input-field-group-wrapper label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8d949e;
+    font-size: 15px;
+    pointer-events: none;
+    transition: transform 0.15s ease, font-size 0.15s ease, color 0.15s ease;
+    transform-origin: left top;
+}
+
+/* Label transformation logic when focused or field has inputs inside it */
+.input-field-group-wrapper input:focus ~ label,
+.input-field-group-wrapper input:not(:placeholder-shown) ~ label {
+    transform: translateY(-130%) scale(0.8);
+    color: #1877f2;
+}
+
+.input-field-group-wrapper input:not(:focus):not(:placeholder-shown) ~ label {
+    color: #8d949e;
+}
+
+/* Submission action control button element */
+.auth-action-btn-submit {
+    width: 100%;
+    height: 44px;
+    background-color: #1877f2;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.1s;
+}
+
+.auth-action-btn-submit:hover {
+    background-color: #166fe5;
+}
+
+.forgotten-password-anchor-link {
+    text-align: center;
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 18px;
+    display: inline-block;
+}
+
+.forgotten-password-anchor-link:hover {
+    text-decoration: underline;
+}
+
+.card-horizontal-divider-bar {
+    border: none;
+    border-top: 1px solid #eaebef;
+    margin: 32px 0 24px 0;
+}
+
+.creation-action-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.btn-create-alternative-profile {
+    height: 44px;
+    padding: 0 32px;
+    background-color: #ffffff;
+    color: #1877f2;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid #1877f2;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.btn-create-alternative-profile:hover {
+    background-color: rgba(24, 119, 242, 0.04);
+}
+
+.meta-corporate-branding-tag {
+    display: flex;
+    justify-content: center;
+}
+
+.meta-logo-svg {
+    height: 14px;
+    opacity: 0.75;
+}
+
+/* Horizontal Bottom Stationary Fixed Language Footer Ribbon strip style sheet */
+.localized-languages-strip {
+    width: 100vw;
+    background-color: #ffffff;
+    border-top: 1px solid #eaebef;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-languages-row {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.lang-node {
+    font-size: 11px;
+    color: #8d949e;
+    cursor: pointer;
+}
+
+.lang-node:hover {
+    text-decoration: underline;
+}
+
+.lang-node.dynamic-active {
+    color: #4b4f56;
+}
+
+.view-more-languages {
+    color: #1c74f4;
+}
+
+/* Responsive Adaptive CSS Layout definitions overrides for clean mobile functionality */
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto;
+    }
+    .main-split-container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+    .left-hero-panel {
+        padding: 40px 24px;
+        justify-content: center;
+    }
+    .right-auth-panel {
+        padding: 20px 24px 60px 24px;
+        justify-content: center;
+        border-left: none;
+    }
+    .localized-languages-strip {
+        position: relative;
+        padding: 20px 16px;
+    }
+    .graphics-composition-matrix {
+        display: none; /* Strip overlapping complex graphics vectors on compressed tablet viewports */
+    }
+    .hero-primary-headline {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .logo-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}

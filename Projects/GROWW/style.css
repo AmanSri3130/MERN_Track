@@ -1,0 +1,395 @@
+/* Groww Design System Palette & Structure Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #0f1115; /* Signature Deep Slate Off-Black Background */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Layer Alignment Rules */
+.groww-navbar {
+    background-color: #0f1115;
+    height: 72px;
+    border-bottom: 1px solid #1e222b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Interactive Search Bar Custom Elements */
+.search-bar-wrapper {
+    background-color: #1e222b;
+    flex-grow: 1;
+    max-width: 520px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.search-bar-wrapper:focus-within {
+    border-color: #00d09c; /* Groww Accent Aqua Green Color Hex */
+    background-color: #13161c;
+}
+
+.search-icon {
+    color: #7c8390;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.search-bar-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    width: 100%;
+    font-size: 15px;
+}
+
+.search-bar-wrapper input::placeholder {
+    color: #7c8390;
+}
+
+.btn-login-register {
+    background-color: #ffffff;
+    color: #0f1115;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.btn-login-register:hover {
+    opacity: 0.9;
+}
+
+/* Hero Section Framework Mechanics Grid Positioning Layout */
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-left-content {
+    flex: 1.2;
+}
+
+.main-headline {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sub-headline {
+    font-size: 18px;
+    color: #9aa6b8;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 36px;
+    max-width: 480px;
+}
+
+.btn-get-started {
+    background-color: #00d09c;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 44px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 208, 156, 0.2);
+    transition: background-color 0.15s ease;
+    margin-bottom: 50px;
+}
+
+.btn-get-started:hover {
+    background-color: #00b386;
+}
+
+/* Horizontal Investment Option Selector Tabs Menu */
+.investment-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tab-card {
+    background-color: #13161c;
+    border: 1px solid #1e222b;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-card:hover {
+    transform: translateY(-2px);
+    border-color: #313745;
+}
+
+.tab-card.active {
+    border-color: #00d09c;
+    background-color: rgba(0, 208, 156, 0.03);
+}
+
+.tab-icon {
+    font-size: 20px;
+}
+
+.tab-card span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+/* Coloring definitions helpers */
+.text-green { color: #00d09c; }
+.text-blue { color: #5367ff; }
+.text-orange { color: #ff9f43; }
+.text-purple { color: #be2edd; }
+
+/* Right Visuals Container Column Card Elements Layout */
+.hero-right-visuals {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.market-indices-card {
+    background-color: #13161c;
+    border: 1px solid #1e222b;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 16px;
+    color: #9aa6b8;
+    font-weight: 600;
+}
+
+.live-indicator {
+    font-size: 12px;
+    font-weight: 700;
+    color: #00d09c;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00d09c;
+    border-radius: 50%;
+    display: inline-block;
+    animation: beacon 1.5s infinite ease-in-out;
+}
+
+@keyframes beacon {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.index-row {
+    border-bottom: 1px solid #1e222b;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.index-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.index-title {
+    font-size: 14px;
+    color: #7c8390;
+    font-weight: 600;
+}
+
+.index-points {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.index-trend {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.index-trend.positive {
+    color: #00d09c;
+    background-color: rgba(0, 208, 156, 0.08);
+}
+
+.index-trend.negative {
+    color: #eb5757;
+    background-color: rgba(235, 87, 87, 0.08);
+}
+
+/* Secondary Interactive Text Info Panel Module block box */
+.dynamic-showcase-panel {
+    background-color: #13161c;
+    border: 1px solid #1e222b;
+    border-radius: 12px;
+    padding: 24px;
+    transition: opacity 0.2s ease;
+}
+
+.dynamic-showcase-panel h4 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.dynamic-showcase-panel p {
+    font-size: 14px;
+    color: #9aa6b8;
+    line-height: 1.5;
+}
+
+/* Security Trust Verification Footer bar styling */
+.trust-strip {
+    background-color: #090a0d;
+    border-top: 1px solid #1e222b;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.trust-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trust-metric {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #7c8390;
+    font-weight: 500;
+}
+
+.trust-metric i {
+    color: #00d09c;
+    font-size: 18px;
+}
+
+/* Responsive Adaptive CSS Layout Breaking rules constraints definitions mapping overrides */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-left-content, .hero-right-visuals {
+        width: 100%;
+    }
+    .sub-headline {
+        margin: 0 auto 36px auto;
+    }
+    .tab-card {
+        align-items: center;
+    }
+    .trust-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .search-bar-wrapper {
+        display: none; /* Strip internal utility features components context on small windows to preserve flow */
+    }
+}

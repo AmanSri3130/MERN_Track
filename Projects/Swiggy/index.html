@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy Clone</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-box">
+                <img src="Swiggy_logo_(old).svg.png" alt="Swiggy Logo">
+            </div>
+            <h2></h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Swiggy Corporate</a>
+            <a href="#">Partner with us</a>
+
+            <button class="app-btn">
+                Get the App
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+
+            <button class="signin-btn">
+                Sign in
+            </button>
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <!-- LEFT IMAGE -->
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png" class="left-food" alt="">
+
+        <!-- RIGHT IMAGE -->
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png" class="right-food" alt="">
+
+
+        <div class="hero-content">
+
+            <h1>
+                Order food & groceries. Discover <br>
+                best restaurants. Swiggy it!
+            </h1>
+
+
+
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+
+                <div class="location-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Enter your delivery location">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="search-input">
+                    <input type="text" placeholder="Search for restaurant, item or more">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h2>FOOD DELIVERY</h2>
+                        <p>FROM RESTAURANTS</p>
+
+                        <span>UPTO 60% OFF</span>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop"
+                        alt="">
+                </div>
+
+
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h2>INSTAMART</h2>
+                        <p>INSTANT GROCERY</p>
+
+                        <span>UPTO 60% OFF</span>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600&auto=format&fit=crop"
+                        alt="">
+                </div>
+
+
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h2>DINEOUT</h2>
+                        <p>EAT OUT & SAVE MORE</p>
+
+                        <span>UPTO 50% OFF</span>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop"
+                        alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ADD THIS SECTION AFTER YOUR HERO SECTION -->
+
+
+<section class="food-section">
+
+  <!-- TOP BAR -->
+  <div class="food-top">
+
+    <h2>Order our best food options</h2>
+
+    <div class="food-arrows">
+
+      <div class="circle-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+
+      <div class="circle-btn">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOD GRID -->
+  <div class="food-grid">
+
+
+    <!-- ITEM 1 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1680359871322-aabe6b33eff5?auto=format&fit=crop&w=400&q=80" alt="South Indian food">
+      <p>South Indian</p>
+    </div>
+
+
+    <!-- ITEM 2 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1772730065344-4cf131b39951?auto=format&fit=crop&w=400&q=80" alt="North Indian food">
+      <p>North Indian</p>
+    </div>
+
+
+    <!-- ITEM 3 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=400&q=80" alt="Biryani">
+      <p>Biryani</p>
+    </div>
+
+
+    <!-- ITEM 4 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1561028526-8f8ed61bb30c?auto=format&fit=crop&w=400&q=80" alt="Desserts">
+      <p>Desserts</p>
+    </div>
+
+
+    <!-- ITEM 5 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=400&q=80" alt="Chinese food">
+      <p>Chinese</p>
+    </div>
+
+
+    <!-- ITEM 6 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?auto=format&fit=crop&w=400&q=80" alt="Cake">
+      <p>Cake</p>
+    </div>
+
+
+    <!-- ITEM 7 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1551730707-ae4fde676aae?auto=format&fit=crop&w=400&q=80" alt="Burger">
+      <p>Burger</p>
+    </div>
+
+
+    <!-- ITEM 8 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1646530208887-8a791bff4701?auto=format&fit=crop&w=400&q=80" alt="Rolls">
+      <p>Rolls</p>
+    </div>
+
+
+    <!-- ITEM 9 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1578905269334-6d7f455bb35e?auto=format&fit=crop&w=400&q=80" alt="Pastry">
+      <p>Pastry</p>
+    </div>
+
+
+    <!-- ITEM 10 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1751560455942-f859f1215826?auto=format&fit=crop&w=400&q=80" alt="Dosa">
+      <p>Dosa</p>
+    </div>
+
+
+    <!-- ITEM 11 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1676136645846-f8625f6da26b?auto=format&fit=crop&w=400&q=80" alt="Coffee">
+      <p>Coffee</p>
+    </div>
+
+
+    <!-- ITEM 12 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=400&q=80" alt="Noodles">
+      <p>Noodles</p>
+    </div>
+
+
+    <!-- ITEM 13 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=400&q=80" alt="Pasta">
+      <p>Pasta</p>
+    </div>
+
+
+    <!-- ITEM 14 -->
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1741376509109-e9edd6f24f5f?auto=format&fit=crop&w=400&q=80" alt="Idli">
+      <p>Idli</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- ADD THIS SECTION AFTER FOOD SECTION -->
+
+
+<section class="grocery-section">
+
+  <!-- TOP BAR -->
+  <div class="grocery-top">
+
+    <h2>Shop groceries on Instamart</h2>
+
+    <div class="grocery-arrows">
+
+      <div class="grocery-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+
+      <div class="grocery-btn">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- GROCERY GRID -->
+  <div class="grocery-grid">
+
+
+    <!-- ITEM 1 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://alafwan.com/afwan/wp-content/uploads/2023/07/farm-fresh-vegetables-475x600.jpg" alt="">
+      </div>
+
+      <p>Fresh <br> Vegetables</p>
+    </div>
+
+
+
+    <!-- ITEM 2 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://www.flowersdeliverygurgaon.com/wp-content/uploads/2021/09/avasflowers-bon-appetit-fruit-basket_max.jpg" alt="">
+      </div>
+
+      <p>Fresh Fruits</p>
+    </div>
+
+
+
+    <!-- ITEM 3 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://thumbs.dreamstime.com/b/rural-still-life-bread-milk-eggs-board-55729613.jpg" alt="">
+      </div>
+
+      <p>Dairy, Bread <br> and Eggs</p>
+    </div>
+
+
+
+    <!-- ITEM 4 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://services.kpnfresh.com/media/v1/categories/images/2ac4ebdf-8cee-4e21-8ac8-0fb7993eac91/rice-atta-dal.webp?c_type=C1" alt="">
+      </div>
+
+      <p>Rice, Atta and <br> Dals</p>
+    </div>
+
+
+
+    <!-- ITEM 5 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://images.jdmagicbox.com/quickquotes/images_main/masala-dry-fruit-380075221-9qefr.jpg" alt="">
+      </div>
+
+      <p>Masalas and <br> Dry Fruits</p>
+    </div>
+
+
+
+    <!-- ITEM 6 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://m.economictimes.com/thumb/msid-122119938,width-1200,height-1200,resizemode-4,imgsize-1946639/ghee-butter-coconut-oil-bad-for-liver-doctor-recommends-switching-to-seed-oils.jpg" alt="">
+      </div>
+
+      <p>Oils and Ghee</p>
+    </div>
+
+
+
+    <!-- ITEM 7 -->
+    <div class="grocery-card">
+      <div class="grocery-image">
+        <img src="https://www.nestle-confectionery.co.uk/sites/default/files/styles/full_width_image_1920x795_/public/2025-04/MUNCHIES_BRAND_BANNER_MOBILE.jpg?itok=ikkfB6Z-" alt="">
+      </div>
+
+      <p>Munchies</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- ADD THIS SECTION AFTER GROCERY SECTION -->
+
+
+<section class="dineout-section">
+
+  <!-- TOP -->
+  <div class="dineout-top">
+
+    <h2>Discover best restaurants on Dineout</h2>
+
+    <div class="dineout-arrows">
+
+      <div class="dineout-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+
+      <div class="dineout-btn">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- CARD CONTAINER -->
+  <div class="dineout-container">
+
+
+
+    <!-- CARD 1 -->
+    <div class="restaurant-card">
+
+      <div class="restaurant-image">
+
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ggz4rs5zsbsi4jav42nb" alt="">
+
+        <div class="restaurant-overlay">
+
+          <h3>Bombay Kulfis</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            3.0
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="restaurant-content">
+
+        <div class="restaurant-info">
+
+          <div>
+            <p>Desserts • Beverages</p>
+            <span>Basavanagudi, Bangalore</span>
+          </div>
+
+          <div class="price-distance">
+            <p>₹200 for two</p>
+            <span>5.2 km</span>
+          </div>
+
+        </div>
+
+
+
+        <div class="offer-light">
+          Up to 10% off with bank offers
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- CARD 2 -->
+    <div class="restaurant-card">
+
+      <div class="restaurant-image">
+
+        <img src="https://ubcitybangalore.in/wp-content/uploads/2025/11/MEA_BLRUB_THE_ROOF_BAR.jpg" alt="">
+
+        <div class="restaurant-overlay">
+
+          <h3>The Roof Asian Grill & Bar</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            4.2
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="restaurant-content">
+
+        <div class="restaurant-info">
+
+          <div>
+            <p>Asian • Grill</p>
+            <span>Ashok Nagar, Bangalore</span>
+          </div>
+
+          <div class="price-distance">
+            <p>₹1600 for two</p>
+            <span>1.1 km</span>
+          </div>
+
+        </div>
+
+
+
+        <div class="offer-dark">
+          <span>
+            <i class="fa-solid fa-percent"></i>
+            Flat 30% off on pre-booking
+          </span>
+
+          <b>+ 2 more</b>
+        </div>
+
+
+
+        <div class="offer-light">
+          Up to 10% off with bank offers
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- CARD 3 -->
+    <div class="restaurant-card">
+
+      <div class="restaurant-image">
+
+        <img src="https://cache.marriott.com/is/image/marriotts7prod/hydhy-mazzo-0012:Pano-Hor" alt="">
+
+        <div class="restaurant-overlay">
+
+          <h3>The Bar - Marriott Executive...</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            4.6
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="restaurant-content">
+
+        <div class="restaurant-info">
+
+          <div>
+            <p>Bar Food</p>
+            <span>Ashok Nagar, Bangalore</span>
+          </div>
+
+          <div class="price-distance">
+            <p>₹1500 for two</p>
+            <span>1.1 km</span>
+          </div>
+
+        </div>
+
+
+
+        <div class="offer-dark">
+          <span>
+            <i class="fa-solid fa-percent"></i>
+            Flat 50% off on pre-booking
+          </span>
+
+          <b>+ 3 more</b>
+        </div>
+
+
+
+        <div class="offer-light">
+          Up to 10% off with bank offers
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- CARD 4 -->
+    <div class="restaurant-card">
+
+      <div class="restaurant-image">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWMrvgS7CrlLD2fO8xw-l_cCDgI0KxXGzOQw&s" alt="">
+
+        <div class="restaurant-overlay">
+
+          <h3>Chowman</h3>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="restaurant-content">
+
+        <div class="restaurant-info">
+
+          <div>
+            <p>Chinese • Asian</p>
+            <span>Rajajinagar, Bangalore</span>
+          </div>
+
+        </div>
+
+
+
+        <div class="offer-dark">
+          <span>
+            <i class="fa-solid fa-percent"></i>
+            Flat 20% off on pre-booking
+          </span>
+        </div>
+
+
+
+        <div class="offer-light">
+          Up to 10% off with bank offers
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</section>
+
+</body>
+
+</html>
